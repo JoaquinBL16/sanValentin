@@ -3,9 +3,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: #ffe6e6;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .container {
@@ -14,15 +16,19 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 350px;
   }
   
   h1 {
     color: #ff4d4d;
     margin-bottom: 20px;
+    font-size: 24px;
   }
   
   #image-container {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 300px;
     margin: 0 auto 20px;
     overflow: hidden;
@@ -39,6 +45,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
   }
   
   button {
@@ -48,6 +55,7 @@ body {
     border: none;
     border-radius: 5px;
     transition: transform 0.3s ease;
+    margin: 10px;
   }
   
   #yes-btn {
@@ -55,7 +63,8 @@ body {
     color: white;
   }
   
-  #yes-btn:hover {
+  #yes-btn:hover,
+  #yes-btn:focus {
     transform: scale(1.1);
   }
   
@@ -64,8 +73,27 @@ body {
     color: #333333;
   }
   
-  #no-btn:hover {
+  #no-btn:hover,
+  #no-btn:focus {
     transform: translate(10px, 10px);
   }
   
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    #image-container {
+      height: 200px;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
   
